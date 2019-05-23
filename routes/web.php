@@ -21,4 +21,6 @@ Route::group(['prefix' => 'admin'], function () {
 });
 Route::resource('/Tareas','Eventcontroller');
 
-Route::resource('/Galeria', 'FotoController');
+Route::resource('/Galeria','GaleriaController');
+
+

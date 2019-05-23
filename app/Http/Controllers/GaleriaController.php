@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Galerium;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Galeriacontroller extends Controller
 {
@@ -12,9 +13,11 @@ class Galeriacontroller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    
+
 {
-   
+    $galeri = Galerium::all();
+        return view('galeria', compact('galeri'));
+
         }
     
 
@@ -43,7 +46,7 @@ public function display()
 
 public function store(Request $request)
 {
-    return view('galeria');
+   
     }
 
     /**

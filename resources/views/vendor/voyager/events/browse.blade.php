@@ -70,6 +70,7 @@
                                 @endif
                             </form>
                         @endif
+
                         <div class="table-responsive">
                             <table id="dataTable" class="table table-hover">
                                 <thead>
@@ -79,7 +80,10 @@
                                                 <input type="checkbox" class="select_all">
                                             </th>
                                         @endcan
+
                                         @foreach($dataType->browseRows as $row)
+
+
                                         <th>
                                             @if ($isServerSide)
                                                 <a href="{{ $row->sortByUrl($orderBy, $sortOrder) }}">
@@ -116,8 +120,10 @@
                                             @endphp
                                             <td>
                                                 @if (isset($row->details->view))
+
                                                     @include($row->details->view, ['row' => $row, 'dataType' => $dataType, 'dataTypeContent' => $dataTypeContent, 'content' => $data->{$row->field}, 'action' => 'browse'])
                                                 @elseif($row->type == 'image')
+                                                
                                                     <img src="@if( !filter_var($data->{$row->field}, FILTER_VALIDATE_URL)){{ Voyager::image( $data->{$row->field} ) }}@else{{ $data->{$row->field} }}@endif" style="width:100px">
                                                 @elseif($row->type == 'relationship')
                                                     @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row->details])
@@ -164,9 +170,11 @@
                                                         @else
                                                             <span class="label label-primary">{{ $row->details->off }}</span>
                                                         @endif
+                                                        
                                                     @else
                                                     {{ $data->{$row->field} }}
                                                     @endif
+
                                                 @elseif($row->type == 'color')
                                                     <span class="badge badge-lg" style="background-color: {{ $data->{$row->field} }}">{{ $data->{$row->field} }}</span>
                                                 @elseif($row->type == 'text')

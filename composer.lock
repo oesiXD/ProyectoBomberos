@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c8cc178b13b7d17b4c74240838e057f",
+    "content-hash": "3bccbcb9ed3b0ecfe913b447899265b1",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -3908,6 +3908,57 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2017-11-27T11:13:29+00:00"
+        },
+        {
+            "name": "trker/voyager-awesome-albums",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/trker/VoyagerAwesomeAlbums.git",
+                "reference": "7a8828211cc5c09cb802a053d16cfc90155a3052"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/trker/VoyagerAwesomeAlbums/zipball/7a8828211cc5c09cb802a053d16cfc90155a3052",
+                "reference": "7a8828211cc5c09cb802a053d16cfc90155a3052",
+                "shasum": ""
+            },
+            "require": {
+                "tcg/voyager": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "trker\\VoyagerAwesomeAlbums\\VoyagerAwesomeAlbumsServiceProvider"
+                    ],
+                    "aliases": {
+                        "VoyagerAlbums": "trker\\VoyagerAwesomeAlbums\\VoyagerAlbums"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "trker\\VoyagerAwesomeAlbums\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adem Türker",
+                    "email": "ademtrker@gmail.com"
+                }
+            ],
+            "description": "Easy quick album creation tool for voyager admin",
+            "keywords": [
+                "Voyager Admin",
+                "awesome albums",
+                "laravel"
+            ],
+            "time": "2018-07-26T06:28:53+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
